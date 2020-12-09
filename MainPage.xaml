@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="VagtplanNy.MainPage"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:VagtplanNy"
@@ -8,20 +9,28 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <Grid>
 
         <ListView ItemsSource="{x:Bind ViewModel.OC_Medarbejder}" HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBox Text="{Binding MedarbejderID, Mode=TwoWay}"/>
                         <TextBlock Text="{Binding Navn, Mode=TwoWay}"/>
                         <TextBlock Text="{Binding Telefon, Mode=TwoWay}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+
+        <!--<TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="MedarbejderID" Text="{Binding MedID, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>-->
+        <TextBox HorizontalAlignment="Left" Margin="216,500,0,0" Description="Navn" Text="{x:Bind Path=ViewModel.MedNavn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="301,500,0,0" Description="Telefon" Text="{x:Bind Path=ViewModel.MedTelefon, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Command="{x:Bind ViewModel.AddNyMedarbejder ,Mode=OneWay}" Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="110"/>
         <Button Command="{x:Bind ViewModel.HentData , Mode=OneWay}" Content="Hent" Height="52" Margin="243,692,0,0" VerticalAlignment="Top" Width="85"/>
+       
+
 
 
     </Grid>

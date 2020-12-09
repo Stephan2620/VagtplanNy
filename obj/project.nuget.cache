@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xeqdUAHxiAJw1ehPS30FFh1gWR8HpdjnhazrzZ12STKXPyFvJh8ttGjJWOIDPXjGMpsTTTFh7uM3wkEylHHdAw==",
+  "dgSpecHash": "70mcMPLtuBoam06quXF1Ok9c5LzEUe9C0l4Q+P+PN4W5wn6uKBrPMFZR3U1VuiTA6VVwG5+c27uBNtepy+Oqqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\slore\\source\\repos\\VagtplanNy\\VagtplanNy.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.10\\microsoft.net.uwpcoreruntimesdk.2.2.10.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.10\\microsoft.netcore.universalwindowsplatform.6.2.10.nupkg.sha512",
+    "C:\\Users\\slore\\.nuget\\packages\\microsoft.ui.xaml\\2.5.0\\microsoft.ui.xaml.2.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\slore\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\slore\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",

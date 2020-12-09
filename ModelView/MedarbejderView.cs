@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -6,6 +7,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http.Formatting;
+
 
 namespace VagtplanNy
 {
@@ -16,6 +19,12 @@ namespace VagtplanNy
 
 
         const string serverUrl = "http://localhost:56319/";
+
+        private string medNavn;
+        private string medTelefon;
+
+        public string MedNavn { get => medNavn; set => medNavn = value; }
+        public string MedTelefon { get => medTelefon; set => medTelefon = value; }
 
 
         public ObservableCollection<Medarbejder> OC_Medarbejder { get; set; }
@@ -35,9 +44,9 @@ namespace VagtplanNy
             OC_Medarbejder = new ObservableCollection<Medarbejder>();
 
             //Testdata 
-            OC_Medarbejder.Add(new Medarbejder(4, "Cikurt", "Rød"));
-            OC_Medarbejder.Add(new Medarbejder(4, "Simon", "Hvid"));
-            OC_Medarbejder.Add(new Medarbejder(4, "Glen", "Gul"));
+            OC_Medarbejder.Add(new Medarbejder("Cikurt", "12345678"));
+            OC_Medarbejder.Add(new Medarbejder("Simon", "12345678"));
+            OC_Medarbejder.Add(new Medarbejder("Glen", "12345678"));
 
             AddNyMedarbejder = new RelayCommand(AddMedarbejder);
             //SletSelectedBlomst = new RelayCommand(SletBlomst, canDeleteBlomsterListe);
@@ -51,12 +60,19 @@ namespace VagtplanNy
             //DanData();
         }
 
+        //public MedarbejderView(string medNavn, string medTelefon)
+        //{
+        //    MedNavn = medNavn;
+        //    MedTelefon = medTelefon;
+        //}
+
+
 
         public void AddMedarbejder()
         {
-            //Medarbejder oBlomst = new Medarbejder(medarbejderID, navn, telefon);
+            //Medarbejder oBlomst = new Medarbejder(MedNavn, MedTelefon);
 
-            //OC_blomster.Add(oBlomst);
+            //OC_Medarbejder.Add(oBlomst);
 
             //Setup client handler
             HttpClientHandler handler = new HttpClientHandler();
@@ -73,17 +89,27 @@ namespace VagtplanNy
 
                 try
                 {
-                    //Medarbejder m = new Medarbejder() { MedarbejderID , Navn, Telefon };
+                    //Medarbejder m = new Medarbejder() {Navn = MedNavn, Telefon = MedTelefon };
+                    Medarbejder m = new Medarbejder() {Navn = MedNavn, Telefon = MedTelefon };
                     //Get all the flower orders from the database
-                    //var medarbejderResponse = client.PostAsJsonAsync<Medarbejder>("api/Medarbejders", m).Result;
+                    var medarbejderResponse = client.PostAsJsonAsync("api/Medarbejders", m).Result;
+
 
                     //Check response -> throw exception if NOT successful
-                    //medarbejderResponse.EnsureSuccessStatusCode();
+                    medarbejderResponse.EnsureSuccessStatusCode();
+
 
                     //Get the hotels as a ICollection
-                    //var medarbejder = medarbejderResponse.Content.ReadAsAsync<Medarbejder>().Result;
+                    //var Medarbejderes = medarbejderResponse.Content.ReadAsAsync<List<Medarbejder>>().Result;
+
+                    var orders = medarbejderResponse.Content.ReadAsAsync<ICollection<Medarbejder>>().Result;
 
                     //SletSelectedBlomst.RaiseCanExecuteChanged();
+                    foreach (var Medarbejdere in orders)
+                    {
+
+                        OC_Medarbejder.Add(Medarbejdere);
+                    }
                 }
                 catch
                 {

@@ -4,24 +4,60 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace VagtplanNy
 {
-    public partial class Medarbejder
+    public partial class Medarbejder : INotifyPropertyChanged
     {
-        public Medarbejder(int medarbejderID, string navn, string telefon)
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            MedarbejderID = medarbejderID;
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private string navn;
+
+        public string Navn
+        {
+            get { return navn; }
+            set
+            {
+                navn = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
+
+        private string telefon;
+
+        public string Telefon
+        {
+            get { return telefon; }
+            set
+            {
+                telefon = value;
+                OnPropertyChanged();
+            }
+        }
+
+  
+
+
+
+        public Medarbejder(string navn, string telefon)
+        {
             Navn = navn;
             Telefon = telefon;
         }
 
-        public int MedarbejderID { get; set; }
-
-
-        public string Navn { get; set; }
-
-        public string Telefon { get; set; }
+        public Medarbejder()
+        {
+        }
 
     }
 }

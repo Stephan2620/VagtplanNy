@@ -48,3 +48,4 @@ C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\qualifiers.txt.intermediate
 C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\Microsoft.UI.Xaml.pri.xml
