@@ -23,13 +23,13 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:ConnectionId='3' x:Name="btn_GoToSecondPage" Content="Go to second page" Margin="431,608,0,0" VerticalAlignment="Top" Width="166"/>
+        <Button x:ConnectionId='3' x:Name="btn_GoBack" Content="Go back to main page" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
 
         <!--<TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="MedarbejderID" Text="{Binding MedID, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>-->
-        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="216,500,0,0" Description="Navn"                                                     TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="301,500,0,0" Description="Telefon"                                                        TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:ConnectionId='6'                                                            Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="110"/>
-        <Button x:ConnectionId='7'                                                     Content="Hent" Height="52" Margin="243,692,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="216,500,0,0" Description="Navn" SelectionHighlightColor="Blue"                                                     TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="black"/>
+        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="301,500,0,0" Description="Telefon"                                                        TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Black"/>
+        <Button x:ConnectionId='6'                                                            Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="138" CornerRadius="8" Background="White" BorderBrush="Black"/>
+        <Button x:ConnectionId='7'                                                     Content="Hent" Height="47" Margin="277,582,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
 
 
 

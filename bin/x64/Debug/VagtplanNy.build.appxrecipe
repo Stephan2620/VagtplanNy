@@ -79,6 +79,9 @@
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\index.xbf">
+      <PackagePath>index.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

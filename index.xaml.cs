@@ -13,29 +13,28 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace VagtplanNy
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class index : Page
     {
-        public MedarbejderView ViewModel { get; set; }
-        public MainPage()
+        public index()
         {
             this.InitializeComponent();
-            ViewModel = new MedarbejderView();
-            this.btn_GoBack.Click += Btn_GoBack_Click;
+            this.btn_GoToSecondPage.Click += Btn_GoToSecondPage_Click;
+            this.btn_GoToFirstPage.Click += Btn_GoFirstPage_Click;
         }
-        private void Btn_GoBack_Click(object sender, RoutedEventArgs e)
+        private void Btn_GoToSecondPage_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-            }
+            this.Frame.Navigate(typeof(SecondPage));
+        }
+        private void Btn_GoFirstPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

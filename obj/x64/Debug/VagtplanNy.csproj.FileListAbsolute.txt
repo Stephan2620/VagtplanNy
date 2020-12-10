@@ -54,3 +54,8 @@ C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\SecondPage.g.i.cs
 C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\SecondPage.g.cs
 C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\SecondPage.xaml
 C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\SecondPage.xbf
+C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\index.xbf
+C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\index.g.i.cs
+C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\index.g.cs
+C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\index.xaml
+C:\Users\slore\source\repos\VagtplanNy\obj\x64\Debug\index.xbf

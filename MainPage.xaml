@@ -23,13 +23,12 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:Name="btn_GoToSecondPage" Content="Go to second page" Margin="431,608,0,0" VerticalAlignment="Top" Width="166"/>
+        <Button x:Name="btn_GoBack" Content="Go back to main page" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
 
-        <!--<TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="MedarbejderID" Text="{Binding MedID, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>-->
-        <TextBox HorizontalAlignment="Left" Margin="216,500,0,0" Description="Navn" Text="{x:Bind Path=ViewModel.MedNavn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="301,500,0,0" Description="Telefon" Text="{x:Bind Path=ViewModel.MedTelefon, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Command="{x:Bind ViewModel.AddNyMedarbejder ,Mode=OneWay}" Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="110"/>
-        <Button Command="{x:Bind ViewModel.HentData , Mode=OneWay}" Content="Hent" Height="52" Margin="243,692,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="Navn" Text="{x:Bind Path=ViewModel.MedNavn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="black" Width="111"/>
+        <TextBox HorizontalAlignment="Left" Margin="277,500,0,0" Description="Telefon" Text="{x:Bind Path=ViewModel.MedTelefon, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Black" Width="111"/>
+        <Button Command="{x:Bind ViewModel.AddNyMedarbejder ,Mode=OneWay}" Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="138" CornerRadius="8" Background="White" BorderBrush="Black"/>
+        <Button Command="{x:Bind ViewModel.HentData , Mode=OneWay}" Content="Hent" Height="47" Margin="277,582,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
 
 
 

@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Go back to main page" Margin="339,669,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Go back to main page" Margin="339,669,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
     </Grid>
 </Page>
 
