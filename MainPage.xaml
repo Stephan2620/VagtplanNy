@@ -12,12 +12,20 @@
 
     <Grid>
 
-        <ListView ItemsSource="{x:Bind ViewModel.OC_Medarbejder}" HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
+
+        <ListView SelectedItem="{x:Bind ViewModel.SelectedMedarbejder, Mode=TwoWay}" ItemsSource="{x:Bind ViewModel.OC_Medarbejder}" HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Navn, Mode=TwoWay}"/>
-                        <TextBlock Text="{Binding Telefon, Mode=TwoWay}"/>
+                        <Border Margin="10">
+                            <TextBlock Text="{Binding MedarbejderID, Mode=TwoWay}"/>
+                        </Border>
+                        <Border Margin="10" >
+                            <TextBlock Text="{Binding Navn, Mode=TwoWay}"/>
+                        </Border>
+                        <Border Margin="10">
+                            <TextBlock Text="{Binding Telefon, Mode=TwoWay}"/>
+                        </Border>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -29,7 +37,7 @@
         <TextBox HorizontalAlignment="Left" Margin="277,500,0,0" Description="Telefon" Text="{x:Bind Path=ViewModel.MedTelefon, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Black" Width="111"/>
         <Button Command="{x:Bind ViewModel.AddNyMedarbejder ,Mode=OneWay}" Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="138" CornerRadius="8" Background="White" BorderBrush="Black"/>
         <Button Command="{x:Bind ViewModel.HentData , Mode=OneWay}" Content="Hent" Height="47" Margin="277,582,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
-
+        <Button Command="{x:Bind ViewModel.SletSelectedMedarbejder, Mode=OneWay}" Content="Slet Medarbejder" Margin="405,583,0,0" VerticalAlignment="Top" Height="47" Width="131" RenderTransformOrigin="1.512,-1.34" CornerRadius="8" Background="White" BorderBrush="Black"/>
 
 
 

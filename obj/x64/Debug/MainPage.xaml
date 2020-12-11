@@ -12,12 +12,20 @@
 
     <Grid>
 
-        <ListView x:ConnectionId='2'                                                 HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
+
+        <ListView x:ConnectionId='2'                                                                                                                    HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Navn, Mode=TwoWay}"/>
-                        <TextBlock Text="{Binding Telefon, Mode=TwoWay}"/>
+                        <Border Margin="10">
+                            <TextBlock Text="{Binding MedarbejderID, Mode=TwoWay}"/>
+                        </Border>
+                        <Border Margin="10" >
+                            <TextBlock Text="{Binding Navn, Mode=TwoWay}"/>
+                        </Border>
+                        <Border Margin="10">
+                            <TextBlock Text="{Binding Telefon, Mode=TwoWay}"/>
+                        </Border>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -25,12 +33,11 @@
 
         <Button x:ConnectionId='3' x:Name="btn_GoBack" Content="Go back to main page" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
 
-        <!--<TextBox HorizontalAlignment="Left" Margin="120,500,0,0" Description="MedarbejderID" Text="{Binding MedID, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>-->
-        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="216,500,0,0" Description="Navn" SelectionHighlightColor="Blue"                                                     TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="black"/>
-        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="301,500,0,0" Description="Telefon"                                                        TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Black"/>
+        <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="120,500,0,0" Description="Navn"                                                     TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="black" Width="111"/>
+        <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="277,500,0,0" Description="Telefon"                                                        TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Black" Width="111"/>
         <Button x:ConnectionId='6'                                                            Content="Tilføj Medarbejder" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="138" CornerRadius="8" Background="White" BorderBrush="Black"/>
         <Button x:ConnectionId='7'                                                     Content="Hent" Height="47" Margin="277,582,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
-
+        <Button x:ConnectionId='8'                                                                   Content="Slet Medarbejder" Margin="405,583,0,0" VerticalAlignment="Top" Height="47" Width="131" RenderTransformOrigin="1.512,-1.34" CornerRadius="8" Background="White" BorderBrush="Black"/>
 
 
 

@@ -45,14 +45,26 @@ namespace VagtplanNy
             }
         }
 
-  
+
+        private int medarbejderID;
+
+        public int MedarbejderID
+        {
+            get { return medarbejderID; }
+            set
+            {
+                medarbejderID = value;
+                OnPropertyChanged();
+            }
+        }
 
 
 
-        public Medarbejder(string navn, string telefon)
+        public Medarbejder(string navn, string telefon, int medarbejderID)
         {
             Navn = navn;
             Telefon = telefon;
+            MedarbejderID = medarbejderID;
         }
 
         public Medarbejder()

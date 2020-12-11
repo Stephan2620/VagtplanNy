@@ -23,6 +23,7 @@ namespace VagtplanNy
         private string medNavn;
         private string medTelefon;
 
+
         public string MedNavn { get => medNavn; set => medNavn = value; }
         public string MedTelefon { get => medTelefon; set => medTelefon = value; }
 
@@ -31,12 +32,13 @@ namespace VagtplanNy
 
         public RelayCommand AddNyMedarbejder { get; set; }
 
-        //public RelayCommand SletSelectedBlomst { get; set; }
+        public RelayCommand SletSelectedMedarbejder { get; set; }
 
         //public RelayCommand GemData { get; set; }
 
         public RelayCommand HentData { get; set; }
 
+        public Medarbejder SelectedMedarbejder { get; set; }
 
 
         public MedarbejderView()
@@ -44,12 +46,12 @@ namespace VagtplanNy
             OC_Medarbejder = new ObservableCollection<Medarbejder>();
 
             //Testdata 
-            OC_Medarbejder.Add(new Medarbejder("Cikurt", "12345678"));
-            OC_Medarbejder.Add(new Medarbejder("Simon", "12345678"));
-            OC_Medarbejder.Add(new Medarbejder("Glen", "12345678"));
+            OC_Medarbejder.Add(new Medarbejder("Cikurt", "12345678",1));
+            OC_Medarbejder.Add(new Medarbejder("Simon", "12345678", 2));
+            OC_Medarbejder.Add(new Medarbejder("Glen", "12345678", 3));
 
             AddNyMedarbejder = new RelayCommand(AddMedarbejder);
-            //SletSelectedBlomst = new RelayCommand(SletBlomst, canDeleteBlomsterListe);
+            SletSelectedMedarbejder = new RelayCommand(SletMedarbejder);
 
             //SelectedOrdreBlomst = new OrdreBlomst();
 
@@ -168,6 +170,45 @@ namespace VagtplanNy
                 //return OC_Medarbejder;
                 //return null;
             }
+        }
+        private void SletMedarbejder()
+        {
+
+            //Setup client handler
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+
+            using (var client = new HttpClient(handler))
+            {
+                //Initialize client
+                client.BaseAddress = new Uri(serverUrl);
+                client.DefaultRequestHeaders.Clear();
+
+                //Request JSON format
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+                    //Get all the flower orders from the database
+
+                    var MedarbejderResponse = client.DeleteAsync($"api/Medarbejders/{SelectedMedarbejder.MedarbejderID}").Result;
+
+                    //Check response -> throw exception if NOT successful
+                    MedarbejderResponse.EnsureSuccessStatusCode();
+                    
+                    //Get the hotels as a ICollection
+                    var orders = MedarbejderResponse.Content.ReadAsAsync<Medarbejder>().Result;
+
+                    SletSelectedMedarbejder.RaiseCanExecuteChanged();
+                }
+                catch
+                {
+
+                }
+            }
+            OC_Medarbejder.Remove(SelectedMedarbejder);
+            SletSelectedMedarbejder.RaiseCanExecuteChanged();
+
         }
 
 

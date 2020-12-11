@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-12-10T12:05:41.979</Modified>
+      <Modified>2020-12-11T11:56:02.362</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\VagtplanNy.exe">
       <PackagePath>entrypoint\VagtplanNy.exe</PackagePath>
-      <Modified>2020-12-10T12:05:41.008</Modified>
+      <Modified>2020-12-11T11:55:59.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\.nuget\packages\microsoft.aspnet.webapi.client\5.2.7\lib\netstandard2.0\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -98,23 +98,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\VagtplanNy.xr.xml">
       <PackagePath>VagtplanNy.xr.xml</PackagePath>
-      <Modified>2020-12-10T12:05:40.922</Modified>
+      <Modified>2020-12-11T11:03:48.312</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-12-10T12:05:40.928</Modified>
+      <Modified>2020-12-11T11:55:59.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\index.xbf">
       <PackagePath>index.xbf</PackagePath>
-      <Modified>2020-12-10T12:05:40.929</Modified>
+      <Modified>2020-12-11T11:55:59.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-12-10T12:05:40.929</Modified>
+      <Modified>2020-12-11T11:55:59.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\SecondPage.xbf">
       <PackagePath>SecondPage.xbf</PackagePath>
-      <Modified>2020-12-10T12:05:40.929</Modified>
+      <Modified>2020-12-11T11:55:59.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\slore\source\repos\VagtplanNy\bin\x64\Debug\Core\VagtplanNy.exe">
       <PackagePath>VagtplanNy.exe</PackagePath>
-      <Modified>2020-12-10T12:05:41.976</Modified>
+      <Modified>2020-12-11T11:56:02.350</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
