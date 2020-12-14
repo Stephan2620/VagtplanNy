@@ -50,7 +50,10 @@ namespace VagtplanNy
             OC_Medarbejder.Add(new Medarbejder("Simon", "12345678", 2));
             OC_Medarbejder.Add(new Medarbejder("Glen", "12345678", 3));
 
+
+
             AddNyMedarbejder = new RelayCommand(AddMedarbejder);
+
             SletSelectedMedarbejder = new RelayCommand(SletMedarbejder);
 
             //SelectedOrdreBlomst = new OrdreBlomst();
@@ -72,10 +75,7 @@ namespace VagtplanNy
 
         public void AddMedarbejder()
         {
-            //Medarbejder oBlomst = new Medarbejder(MedNavn, MedTelefon);
-
-            //OC_Medarbejder.Add(oBlomst);
-
+            OC_Medarbejder.Clear();
             //Setup client handler
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
@@ -91,23 +91,25 @@ namespace VagtplanNy
 
                 try
                 {
-                    //Medarbejder m = new Medarbejder() {Navn = MedNavn, Telefon = MedTelefon };
+                    // her tager vi data i text felterne og sætter dem ind til klassen Medarbejder og kalder det "m" 
                     Medarbejder m = new Medarbejder() {Navn = MedNavn, Telefon = MedTelefon };
-                    //Get all the flower orders from the database
-                    var medarbejderResponse = client.PostAsJsonAsync("api/Medarbejders", m).Result;
 
+                    //og her poster vi det til vores database som en Json og som Async så det programmet ikke føles langsomt
+                    var medarbejderResponse = client.PostAsJsonAsync("api/Medarbejders", m).Result;
 
                     //Check response -> throw exception if NOT successful
                     medarbejderResponse.EnsureSuccessStatusCode();
 
+                    // her henter vi tabellen fra databasen 
+                    var getmedarbejderResponse = client.GetAsync("api/Medarbejders").Result;
 
-                    //Get the hotels as a ICollection
-                    //var Medarbejderes = medarbejderResponse.Content.ReadAsAsync<List<Medarbejder>>().Result;
+                    //Check response -> throw exception if NOT successful
+                    getmedarbejderResponse.EnsureSuccessStatusCode();
 
-                    var orders = medarbejderResponse.Content.ReadAsAsync<ICollection<Medarbejder>>().Result;
-
-                    //SletSelectedBlomst.RaiseCanExecuteChanged();
-                    foreach (var Medarbejdere in orders)
+                    //her tager vi tabellen Medarbejder som vi lige har hentet laver det til en en ICollection
+                    var DBMedarbejder = getmedarbejderResponse.Content.ReadAsAsync<ICollection<Medarbejder>>().Result;
+                    // her for vi udskrevet tabellen som en foreach i programmet i vores observablecollection 
+                    foreach (var Medarbejdere in DBMedarbejder)
                     {
 
                         OC_Medarbejder.Add(Medarbejdere);
