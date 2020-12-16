@@ -27,7 +27,7 @@
       <RootProperty Name="Command" />
       <RootProperty Name="RenderTransformOrigin" />
     </RootType>
-    <RootType FullName="VagtplanNy.index" />
+    <RootType FullName="VagtplanNy.ForSide" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
@@ -69,7 +69,8 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
     </RootType>
-    <RootType FullName="VagtplanNy.MainPage" />
-    <RootType FullName="VagtplanNy.SecondPage" />
+    <RootType FullName="VagtplanNy.MedSide" />
+    <RootType FullName="VagtplanNy.AddVagtSide" />
+    <RootType FullName="VagtplanNy.view.Vagtplan" />
   </Roots.RootTypes>
 </Roots>

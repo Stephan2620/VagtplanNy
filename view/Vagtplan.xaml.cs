@@ -15,26 +15,16 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace VagtplanNy
+namespace VagtplanNy.view
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class index : Page
+    public sealed partial class Vagtplan : Page
     {
-        public index()
+        public Vagtplan()
         {
             this.InitializeComponent();
-            this.btn_GoToSecondPage.Click += Btn_GoToSecondPage_Click;
-            this.btn_GoToFirstPage.Click += Btn_GoFirstPage_Click;
-        }
-        private void Btn_GoToSecondPage_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SecondPage));
-        }
-        private void Btn_GoFirstPage_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

@@ -119,18 +119,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="index.xaml.cs">
-      <DependentUpon>index.xaml</DependentUpon>
+    <Compile Include="view\ForSide.xaml.cs">
+      <DependentUpon>ForSide.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="view\MedSide.xaml.cs">
+      <DependentUpon>MedSide.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Medarbejder.cs" />
     <Compile Include="ModelView\MedarbejderView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand.cs" />
-    <Compile Include="SecondPage.xaml.cs">
-      <DependentUpon>SecondPage.xaml</DependentUpon>
+    <Compile Include="view\AddVagtSide.xaml.cs">
+      <DependentUpon>AddVagtSide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\Vagtplan.xaml.cs">
+      <DependentUpon>Vagtplan.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -153,15 +156,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="index.xaml">
+    <Page Include="view\ForSide.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="view\MedSide.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SecondPage.xaml">
+    <Page Include="view\AddVagtSide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\Vagtplan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
