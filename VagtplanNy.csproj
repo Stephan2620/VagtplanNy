@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelView\VagtView.cs" />
+    <Compile Include="Model\Vagt.cs" />
     <Compile Include="view\ForSide.xaml.cs">
       <DependentUpon>ForSide.xaml</DependentUpon>
     </Compile>

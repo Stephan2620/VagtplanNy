@@ -4,6 +4,9 @@
     <RootPropertyPathName Name="Telefon" />
     <RootPropertyPathName Name="Navn" />
     <RootPropertyPathName Name="MedarbejderID" />
+    <RootPropertyPathName Name="Tid" />
+    <RootPropertyPathName Name="Lokation" />
+    <RootPropertyPathName Name="Afdeling" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -27,7 +30,7 @@
       <RootProperty Name="Command" />
       <RootProperty Name="RenderTransformOrigin" />
     </RootType>
-    <RootType FullName="VagtplanNy.forside" />
+    <RootType FullName="VagtplanNy.ForSide" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
@@ -69,8 +72,8 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
     </RootType>
-    <RootType FullName="VagtplanNy.MainPage" />
-    <RootType FullName="VagtplanNy.SecondPage" />
-    <RootType FullName="VagtplanNy.view.Vagtplan" />
+    <RootType FullName="VagtplanNy.MedSide" />
+    <RootType FullName="VagtplanNy.AddVagtSide" />
+    <RootType FullName="VagtplanNy.Vagtplan" />
   </Roots.RootTypes>
 </Roots>

@@ -4,6 +4,9 @@
     <RootPropertyPathName Name="Telefon" />
     <RootPropertyPathName Name="Navn" />
     <RootPropertyPathName Name="MedarbejderID" />
+    <RootPropertyPathName Name="Tid" />
+    <RootPropertyPathName Name="Lokation" />
+    <RootPropertyPathName Name="Afdeling" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -71,6 +74,6 @@
     </RootType>
     <RootType FullName="VagtplanNy.MedSide" />
     <RootType FullName="VagtplanNy.AddVagtSide" />
-    <RootType FullName="VagtplanNy.view.Vagtplan" />
+    <RootType FullName="VagtplanNy.Vagtplan" />
   </Roots.RootTypes>
 </Roots>

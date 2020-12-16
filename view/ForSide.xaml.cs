@@ -25,6 +25,7 @@ namespace VagtplanNy
         public ForSide()
         {
             this.InitializeComponent();
+            this.btn_GoToThirdPage.Click += btn_GoToThirdPage_Click;
             this.btn_GoToSecondPage.Click += Btn_GoToSecondPage_Click;
             this.btn_GoToFirstPage.Click += Btn_GoFirstPage_Click;
         }
@@ -35,6 +36,10 @@ namespace VagtplanNy
         private void Btn_GoFirstPage_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MedSide));
+        }
+        private void btn_GoToThirdPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Vagtplan));
         }
     }
 }

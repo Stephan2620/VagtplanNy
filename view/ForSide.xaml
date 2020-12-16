@@ -11,5 +11,7 @@
     <Grid>
         <Button x:Name="btn_GoToSecondPage" Content="Go to second page" Margin="302,586,0,0" VerticalAlignment="Top" Width="166" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
         <Button x:Name="btn_GoToFirstPage" Content="Go to first page" Margin="67,586,0,0" VerticalAlignment="Top" Width="166" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
+        <Button x:Name="btn_GoToThirdPage" Content="Go to Third page" Margin="547,586,0,0" VerticalAlignment="Top" Width="166" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
+
     </Grid>
 </Page>
