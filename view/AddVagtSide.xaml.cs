@@ -22,9 +22,15 @@ namespace VagtplanNy
     /// </summary>
     public sealed partial class AddVagtSide : Page
     {
+        public MedarbejderView ViewModel { get; set; }
+        public VagtView ViewModel2 { get; set; }
+
         public AddVagtSide()
         {
             this.InitializeComponent();
+            ViewModel = new MedarbejderView();
+            ViewModel2 = new VagtView();
+
             this.btn_GoBack.Click += Btn_GoBack_Click;
         }
         private void Btn_GoBack_Click(object sender, RoutedEventArgs e)
@@ -34,5 +40,11 @@ namespace VagtplanNy
                 this.Frame.GoBack();
             }
         }
+
+        public List<Medarbejder> medarbejders { get; set; }
+        public List<Vagt> vagts { get; set; }
+
+      
+
     }
 }

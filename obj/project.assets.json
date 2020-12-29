@@ -8624,28 +8624,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\slore\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Mikkel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\slore\\source\\repos\\VagtplanNy\\VagtplanNy.csproj",
+      "projectUniqueName": "C:\\Users\\Mikkel\\OneDrive\\2 semprojekt - endelige projekt\\VagtplanNy\\VagtplanNy.csproj",
       "projectName": "VagtplanNy",
-      "projectPath": "C:\\Users\\slore\\source\\repos\\VagtplanNy\\VagtplanNy.csproj",
-      "packagesPath": "C:\\Users\\slore\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\slore\\source\\repos\\VagtplanNy\\obj\\",
+      "projectPath": "C:\\Users\\Mikkel\\OneDrive\\2 semprojekt - endelige projekt\\VagtplanNy\\VagtplanNy.csproj",
+      "packagesPath": "C:\\Users\\Mikkel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mikkel\\OneDrive\\2 semprojekt - endelige projekt\\VagtplanNy\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\slore\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Mikkel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"

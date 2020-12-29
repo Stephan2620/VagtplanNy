@@ -9,6 +9,33 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="btn_GoBack" Content="Go back to main page" Margin="339,669,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
+        <Button x:Name="btn_GoBack" Content="Go back to main page" Margin="95,875,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
+        <ComboBox Grid.Row="0" ItemsSource="{x:Bind ViewModel.OC_Medarbejder}" Margin="121,343,0,0" Height="50" Width="100">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Navn, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding MedarbejderID, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <ComboBox ItemsSource="{x:Bind ViewModel2.OC_Vagt}" Margin="259,343,0,0" Height="50" Width="100">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Afdeling, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding Lokation, Mode=TwoWay}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        
+        <Button Command="{x:Bind ViewModel.HentData , Mode=OneWay}" Content="Hent" Height="47" Margin="277,582,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
+
+
     </Grid>
+
 </Page>

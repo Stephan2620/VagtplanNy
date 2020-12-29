@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="VagtplanNy.AddVagtSide"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,7 +9,34 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Go back to main page" Margin="339,669,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
+        <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Go back to main page" Margin="95,875,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
+        <ComboBox x:ConnectionId='3' Grid.Row="0"                                                 Margin="121,343,0,0" Height="50" Width="100">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Navn, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding MedarbejderID, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <ComboBox x:ConnectionId='4'                                           Margin="259,343,0,0" Height="50" Width="100">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Afdeling, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding Lokation, Mode=TwoWay}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        
+        <Button x:ConnectionId='5'                                                     Content="Hent" Height="47" Margin="277,582,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
+
+
     </Grid>
+
 </Page>
 

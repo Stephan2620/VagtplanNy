@@ -37,5 +37,10 @@ namespace VagtplanNy
                 this.Frame.GoBack();
             }
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
