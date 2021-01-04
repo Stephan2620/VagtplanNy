@@ -145,7 +145,7 @@ namespace VagtplanNy
 
                 try
                 {
-                    //Get all the flower orders from the database
+                    //Get all medarbejdere fra database
                     var medarbejderResponse = client.GetAsync("api/Medarbejders").Result;
 
                     //Check response -> throw exception if NOT successful

@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2' x:Name="btn_GoToSecondPage" Content="Go to second page" Margin="302,586,0,0" VerticalAlignment="Top" Width="166" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
-        <Button x:ConnectionId='3' x:Name="btn_GoToFirstPage" Content="Go to first page" Margin="67,586,0,0" VerticalAlignment="Top" Width="166" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
-        <Button x:ConnectionId='4' x:Name="btn_GoToThirdPage" Content="Go to Third page" Margin="547,586,0,0" VerticalAlignment="Top" Width="166" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
+        <Button x:ConnectionId='2' x:Name="btn_GoToSecondPage" Content="Tilføj Vagt" FontSize="26" Margin="450,336,0,0" VerticalAlignment="Top" Width="300" CornerRadius="8" Background="White" BorderBrush="Black" Height="271"/>
+        <Button x:ConnectionId='3' x:Name="btn_GoToFirstPage" Content="Oversigt" FontSize="26" Margin="100,336,0,0" VerticalAlignment="Top" Width="300" CornerRadius="8" Background="White" BorderBrush="Black" Height="271"/>
+        <Button x:ConnectionId='4' x:Name="btn_GoToThirdPage" Content="Tilføj Medarbejder" FontSize="26" Margin="799,336,0,0" VerticalAlignment="Top" Width="300" CornerRadius="8" Background="White" BorderBrush="Black" Height="271"/>
 
     </Grid>
 </Page>

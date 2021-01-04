@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using VagtplanNy.ModelView;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,12 +25,14 @@ namespace VagtplanNy
     {
         public MedarbejderView ViewModel { get; set; }
         public VagtView ViewModel2 { get; set; }
+        public NyVagtView ViewModel3 { get; set; }
 
-        public AddVagtSide()
+    public AddVagtSide()
         {
             this.InitializeComponent();
             ViewModel = new MedarbejderView();
             ViewModel2 = new VagtView();
+            ViewModel3 = new NyVagtView();
 
             this.btn_GoBack.Click += Btn_GoBack_Click;
         }
@@ -44,7 +47,9 @@ namespace VagtplanNy
         public List<Medarbejder> medarbejders { get; set; }
         public List<Vagt> vagts { get; set; }
 
-      
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
     }
 }

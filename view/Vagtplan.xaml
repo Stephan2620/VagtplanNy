@@ -9,22 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView ItemsSource="{x:Bind ViewModel.OC_Vagt}" HorizontalAlignment="Left" Height="438" Margin="376,146,0,0" VerticalAlignment="Top" Width="417">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Border Margin="10">
-                            <TextBlock Text="{Binding Afdeling, Mode=TwoWay}"/>
-                        </Border>
-                        <Border Margin="10" >
-                            <TextBlock Text="{Binding Lokation, Mode=TwoWay}"/>
-                        </Border>
-                        <Border Margin="10">
-                            <TextBlock Text="{Binding Tid, Mode=TwoWay}"/>
-                        </Border>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+        <ListView HorizontalAlignment="Left" Height="438" Margin="376,146,0,0" VerticalAlignment="Top" Width="417">
+            <ComboBox Width="120"/>
         </ListView>
         <Button x:Name="btn_GoBack" Content="Go back to main page" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
     </Grid>
