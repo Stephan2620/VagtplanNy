@@ -10,7 +10,7 @@
 
     <Grid>
         <ListView HorizontalAlignment="Left" Height="438" Margin="376,146,0,0" VerticalAlignment="Top" Width="417">
-            <ComboBox Width="120"/>
+            
         </ListView>
         <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Go back to main page" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
     </Grid>

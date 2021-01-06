@@ -77,7 +77,6 @@ namespace VagtplanNy
 
 
 
-
         public NyVagt(string nyVagtNavn, string nyVagtAfdeling, string nyVagtLokation, string nyVagtTid, string nyVagtDato)
         {
             NyVagtNavn = nyVagtNavn;

@@ -27,7 +27,7 @@ namespace VagtplanNy
         public VagtView ViewModel2 { get; set; }
         public NyVagtView ViewModel3 { get; set; }
 
-    public AddVagtSide()
+        public AddVagtSide()
         {
             this.InitializeComponent();
             ViewModel = new MedarbejderView();
@@ -47,7 +47,29 @@ namespace VagtplanNy
         public List<Medarbejder> medarbejders { get; set; }
         public List<Vagt> vagts { get; set; }
 
+     
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+             
+        }
+
+        private void ComboBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged_3(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

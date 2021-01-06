@@ -23,10 +23,11 @@ namespace VagtplanNy
         {
             OC_Vagt = new ObservableCollection<Vagt>();
 
-            //OC_Vagt.Add(new Vagt("Afdeling", "Lokation", "tid"));
+            OC_Vagt.Add(new Vagt("test", "test", "8:00-15:30"));
+            OC_Vagt.Add(new Vagt("test", "test", "15:30-22.00"));
 
 
-            OC_Vagt.Clear();
+            //OC_Vagt.Clear();
 
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
@@ -42,13 +43,13 @@ namespace VagtplanNy
 
                 try
                 {
-                    //Get all the flower orders from the database
+                    //Get alle vagterne i databasen
                     var vagtResponse = client.GetAsync("api/Vagts").Result;
 
                     //Check response -> throw exception if NOT successful
                     vagtResponse.EnsureSuccessStatusCode();
 
-                    //Get the hotels as a ICollection
+                    //Get alle vagter som en ICollection
                     //var Medarbejderes = medarbejderResponse.Content.ReadAsAsync<List<Medarbejder>>().Result;
 
                     var vagter = vagtResponse.Content.ReadAsAsync<ICollection<Vagt>>().Result;

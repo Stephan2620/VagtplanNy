@@ -4,6 +4,12 @@
     <RootPropertyPathName Name="Telefon" />
     <RootPropertyPathName Name="Navn" />
     <RootPropertyPathName Name="MedarbejderID" />
+    <RootPropertyPathName Name="NyVagtDato" />
+    <RootPropertyPathName Name="NyVagtTid" />
+    <RootPropertyPathName Name="NyVagtLokation" />
+    <RootPropertyPathName Name="NyVagtAfdeling" />
+    <RootPropertyPathName Name="NyVagtNavn" />
+    <RootPropertyPathName Name="Tid" />
     <RootPropertyPathName Name="Lokation" />
     <RootPropertyPathName Name="Afdeling" />
   </Roots.PropertyPathNames>
@@ -31,6 +37,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Command" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="VagtplanNy.ForSide" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -42,7 +49,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
@@ -94,6 +100,7 @@
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
+      <RootProperty Name="DataContext" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Header" />
       <RootProperty Name="Margin" />

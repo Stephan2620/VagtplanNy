@@ -10,20 +10,21 @@ using System.Threading.Tasks;
 using System.Net.Http.Formatting;
 
 namespace VagtplanNy.ModelView
-  {
-    public class NyVagtView
 {
+    public class NyVagtView
+    {
     const string serverUrl = "http://localhost:56319/";
 
 
+    
+    // Instance field til tilføjelse af vagt
     private string medarbejderNavnVagt;
     private string vagtAfdeling;
     private string vagtLokation;
     private string vagtTid;
     private string vagtDato;
-    
 
-
+    // Properties til tilføjelse af vagt
     public string MedarbejderNavnVagt { get => medarbejderNavnVagt; set => medarbejderNavnVagt = value; }
     public string VagtAfdeling{ get => vagtAfdeling; set => vagtAfdeling = value; }
     public string VagtLokation { get => vagtLokation; set => vagtLokation = value; }
@@ -31,12 +32,15 @@ namespace VagtplanNy.ModelView
     public string VagtDato { get => vagtDato; set => vagtDato = value; }
 
     public ObservableCollection<NyVagt> OC_NyVagt { get; set; }
-
     public RelayCommand AddNyVagt { get; set; }
     public RelayCommand HentData { get; set; }
-
+   
+    
+    
     public NyVagtView()
     {
+      
+            
         OC_NyVagt = new ObservableCollection<NyVagt>();
 
         AddNyVagt = new RelayCommand(AddVagt);
@@ -92,7 +96,7 @@ namespace VagtplanNy.ModelView
 
             }
         }
+           
+        }
     }
-
-}
 }
