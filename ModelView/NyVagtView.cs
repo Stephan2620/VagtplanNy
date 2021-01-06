@@ -34,6 +34,8 @@ namespace VagtplanNy.ModelView
     public ObservableCollection<NyVagt> OC_NyVagt { get; set; }
     public RelayCommand AddNyVagt { get; set; }
     public RelayCommand HentData { get; set; }
+    
+    //public NyVagtView
    
     
     
@@ -77,13 +79,13 @@ namespace VagtplanNy.ModelView
                 nyVagtResponse.EnsureSuccessStatusCode();
 
                 // her henter vi tabellen fra databasen 
-                var getmedarbejderResponse = client.GetAsync("api/NyVagts").Result;
+                var GetVagtResponse = client.GetAsync("api/NyVagts").Result;
 
-                //Check response -> throw exception if NOT successful
-                getmedarbejderResponse.EnsureSuccessStatusCode();
+                 //Check response -> throw exception if NOT successful
+                GetVagtResponse.EnsureSuccessStatusCode();
 
                 //her tager vi tabellen Medarbejder som vi lige har hentet laver det til en en ICollection
-                var DBNyVagt = getmedarbejderResponse.Content.ReadAsAsync<ICollection<NyVagt>>().Result;
+                var DBNyVagt = GetVagtResponse.Content.ReadAsAsync<ICollection<NyVagt>>().Result;
                 // her for vi udskrevet tabellen som en foreach i programmet i vores observablecollection 
                 foreach (var Nyvagt in DBNyVagt)
                 {

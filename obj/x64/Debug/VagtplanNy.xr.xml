@@ -11,6 +11,8 @@
     <RootPropertyPathName Name="NyVagtNavn" />
     <RootPropertyPathName Name="Tid" />
     <RootPropertyPathName Name="Lokation" />
+    <RootPropertyPathName Name="ViewModel3" />
+    <RootPropertyPathName Name="VagtAfdeling" />
     <RootPropertyPathName Name="Afdeling" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -97,6 +99,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectedValuePath" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">

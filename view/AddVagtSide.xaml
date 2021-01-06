@@ -22,7 +22,7 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <ComboBox Header="Afdeling"  ItemsSource="{x:Bind Path=ViewModel2.OC_Vagt}" Text="{x:Bind Path=ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="163" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox Header="Afdeling"  ItemsSource="{x:Bind Path=ViewModel2.OC_Vagt, Mode=OneWay}" SelectedItem="{Binding ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="163" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

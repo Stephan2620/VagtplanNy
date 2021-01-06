@@ -22,7 +22,7 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <ComboBox x:ConnectionId='4' Header="Afdeling"                                                                                              Margin="277,343,0,0" Height="70" Width="163"                                             >
+        <ComboBox x:ConnectionId='4' Header="Afdeling"                                                              SelectedValuePath="{Binding ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="163"                                             >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
