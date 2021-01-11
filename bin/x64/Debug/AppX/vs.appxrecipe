@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>4088B0360B44CAE9FD54A9550EF2BD99AAEB5BBC59E555FB6A636FCD03E38474</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>18204ADE276811CC3879CFE95F22028BD9B14A90F7C9585331844F43BF1247DE</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1ed5f832-9d9c-43bb-93c0-d3bde4b78947_1.0.0.0_x64__b43tygsjgzrdg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1ed5f832-9d9c-43bb-93c0-d3bde4b78947_b43tygsjgzrdg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>1ed5f832-9d9c-43bb-93c0-d3bde4b78947</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-06T12:58:14.353</Modified>
+      <Modified>2021-01-11T19:31:49.774</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\VagtplanNy.exe">
       <PackagePath>entrypoint\VagtplanNy.exe</PackagePath>
-      <Modified>2021-01-06T12:58:13.244</Modified>
+      <Modified>2021-01-11T19:31:47.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\.nuget\packages\microsoft.aspnet.webapi.client\5.2.7\lib\netstandard2.0\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -98,27 +98,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\VagtplanNy.xr.xml">
       <PackagePath>VagtplanNy.xr.xml</PackagePath>
-      <Modified>2021-01-06T12:58:13.008</Modified>
+      <Modified>2021-01-11T19:31:47.696</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-01-06T12:58:13.023</Modified>
+      <Modified>2021-01-11T19:31:47.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\view\ForSide.xbf">
       <PackagePath>view\ForSide.xbf</PackagePath>
-      <Modified>2021-01-06T12:58:13.024</Modified>
+      <Modified>2021-01-11T19:31:47.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\view\MedSide.xbf">
       <PackagePath>view\MedSide.xbf</PackagePath>
-      <Modified>2021-01-06T12:58:13.024</Modified>
+      <Modified>2021-01-11T19:31:47.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\view\AddVagtSide.xbf">
       <PackagePath>view\AddVagtSide.xbf</PackagePath>
-      <Modified>2021-01-06T12:58:13.024</Modified>
+      <Modified>2021-01-11T19:31:47.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\view\Vagtplan.xbf">
       <PackagePath>view\Vagtplan.xbf</PackagePath>
-      <Modified>2021-01-06T12:58:13.024</Modified>
+      <Modified>2021-01-11T19:31:47.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -134,11 +134,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-01-04T12:40:29.524</Modified>
+      <Modified>2021-01-11T19:28:53.576</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mikkel\OneDrive\2 semprojekt - endelige projekt\VagtplanNy\bin\x64\Debug\Core\VagtplanNy.exe">
       <PackagePath>VagtplanNy.exe</PackagePath>
-      <Modified>2021-01-06T12:58:14.347</Modified>
+      <Modified>2021-01-11T19:31:49.734</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

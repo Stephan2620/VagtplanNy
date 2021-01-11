@@ -10,8 +10,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="btn_GoBack" Content="Tilbage" FontSize="20" Margin="98,760,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
-        <ComboBox Header="Medarbejder" PlaceholderText="(Navn / ID)" Grid.Row="0" ItemsSource="{x:Bind Path=ViewModel.OC_Medarbejder}"  Text="{x:Bind Path=ViewModel3.MedarbejderNavnVagt}" Margin="121,343,0,0" Height="70" Width="133" SelectionChanged="ComboBox_SelectionChanged_3">
+        <Button x:Name="btn_GoBack" Content="Tilbage" FontSize="20" Margin="121,569,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
+        <ComboBox Header="Medarbejder" PlaceholderText="Navn / ID" Grid.Row="0" ItemsSource="{x:Bind Path=ViewModel.OC_Medarbejder}"  Text="{x:Bind Path=ViewModel3.MedarbejderNavnVagt}" Margin="121,343,0,0" Height="70" Width="133" SelectionChanged="ComboBox_SelectionChanged_3">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -22,43 +22,28 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <ComboBox Header="Afdeling"  ItemsSource="{x:Bind Path=ViewModel2.OC_Vagt, Mode=OneWay}" SelectedItem="{Binding ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="163" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox Header="Vagt" PlaceholderText="Afdeling/Lokation/Tid" ItemsSource="{x:Bind Path=ViewModel2.OC_Vagt, Mode=OneWay}" SelectedItem="{Binding ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="192" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding Afdeling, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding Lokation, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding Tid, Mode=TwoWay}" />
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <ComboBox Header="Lokation"  ItemsSource="{x:Bind Path=ViewModel2.OC_Vagt}" Text="{x:Bind Path=ViewModel3.VagtLokation}" Margin="471,343,0,0" Height="70" Width="163" SelectionChanged="ComboBox_SelectionChanged_2">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Lokation, Mode=TwoWay}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+
         <Button Command="{x:Bind Mode=OneWay, Path=ViewModel.HentData}" Content="Hent" Height="47" Margin="121,453,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black" Click="Button_Click"/>
         <Button Command="{x:Bind Mode=OneWay, Path=ViewModel3.AddNyVagt}" Content="Tilføj Vagt" Height="47" Margin="237,453,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
 
-        <ComboBox Header="Tid" ItemsSource="{x:Bind Path=ViewModel2.OC_Vagt}" Text="{x:Bind Path=ViewModel3.VagtTid}" Margin="655,343,0,0" Width="120" Height="70" SelectionChanged="ComboBox_SelectionChanged_1">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Tid, Mode=TwoWay}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
 
 
         <!--DateFormat="{}{dayofweek.full}‎, ‎{month.full}‎ ‎{day.integer}‎, ‎{year.full}"/>-->
 
-        <CalendarDatePicker x:Name="Kalender" DataContext="{x:Bind Path=ViewModel3.VagtDato}" PlaceholderText="Vælg Dato" Header="Dato" Margin="798,343,0,0" VerticalAlignment="Top" Height="70" Width="126" />
-        <TextBlock HorizontalAlignment="Left" Margin="75,56,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Text="Tilføj Vagt" FontSize="30"  />
+        <CalendarDatePicker x:Name="Kalender" DataContext="{x:Bind Path=ViewModel3.VagtDato}" PlaceholderText="Vælg Dato" Header="Dato" Margin="491,343,0,0" VerticalAlignment="Top" Height="70" Width="126" />
+        <TextBlock HorizontalAlignment="Left" Margin="121,227,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Text="Tilføj Vagt" FontSize="30"  />
 
         <ListView ItemsSource="{x:Bind ViewModel3.OC_NyVagt}" HorizontalAlignment="Left" Height="375" Margin="471,453,0,0" VerticalAlignment="Top" Width="291" >
             <ListView.ItemTemplate>

@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Tilbage" FontSize="20" Margin="98,760,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
+        <Button x:ConnectionId='2' x:Name="btn_GoBack" Content="Tilbage" FontSize="20" Margin="121,569,0,0" VerticalAlignment="Top" Width="180" Height="47" CornerRadius="8" Background="White" BorderBrush="Black" />
         <ComboBox x:ConnectionId='3' Header="Medarbejder" PlaceholderText="(Navn / ID)" Grid.Row="0"                                                                                                           Margin="121,343,0,0" Height="70" Width="133"                                               >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -22,45 +22,30 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <ComboBox x:ConnectionId='4' Header="Afdeling"                                                              SelectedValuePath="{Binding ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="163"                                             >
+        <ComboBox x:ConnectionId='4' Header="Vagt"                                                              SelectedItem="{Binding ViewModel3.VagtAfdeling}" Margin="277,343,0,0" Height="70" Width="163"                                             >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding Afdeling, Mode=TwoWay}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-
-        <ComboBox x:ConnectionId='5' Header="Lokation"                                                                                              Margin="471,343,0,0" Height="70" Width="163"                                               >
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
                         <TextBlock Text="{Binding Lokation, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding Tid, Mode=TwoWay}" />
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button x:ConnectionId='6'                                                         Content="Hent" Height="47" Margin="121,453,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"                     />
-        <Button x:ConnectionId='7'                                                           Content="Tilføj Vagt" Height="47" Margin="237,453,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
 
-        <ComboBox x:ConnectionId='8' Header="Tid"                                                                                        Margin="655,343,0,0" Width="120" Height="70"                                               >
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Tid, Mode=TwoWay}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+
+        <Button x:ConnectionId='5'                                                         Content="Hent" Height="47" Margin="121,453,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"                     />
+        <Button x:ConnectionId='6'                                                           Content="Tilføj Vagt" Height="47" Margin="237,453,0,0" VerticalAlignment="Top" Width="111" CornerRadius="8" Background="White" BorderBrush="Black"/>
+
 
 
         <!--DateFormat="{}{dayofweek.full}‎, ‎{month.full}‎ ‎{day.integer}‎, ‎{year.full}"/>-->
 
-        <CalendarDatePicker x:ConnectionId='9' x:Name="Kalender"                                                 PlaceholderText="Vælg Dato" Header="Dato" Margin="798,343,0,0" VerticalAlignment="Top" Height="70" Width="126" />
-        <TextBlock HorizontalAlignment="Left" Margin="75,56,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Text="Tilføj Vagt" FontSize="30"  />
+        <CalendarDatePicker x:ConnectionId='7' x:Name="Kalender"                                                 PlaceholderText="Vælg Dato" Header="Dato" Margin="471,343,0,0" VerticalAlignment="Top" Height="70" Width="126" />
+        <TextBlock HorizontalAlignment="Left" Margin="121,227,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Text="Tilføj Vagt" FontSize="30"  />
 
-        <ListView x:ConnectionId='10'                                             HorizontalAlignment="Left" Height="375" Margin="471,453,0,0" VerticalAlignment="Top" Width="291" >
+        <ListView x:ConnectionId='8'                                             HorizontalAlignment="Left" Height="375" Margin="471,453,0,0" VerticalAlignment="Top" Width="291" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

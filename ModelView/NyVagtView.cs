@@ -69,7 +69,7 @@ namespace VagtplanNy.ModelView
 
             try
             {
-                // her tager vi data i text felterne og sætter dem ind til klassen Medarbejder og kalder det "m" 
+                // her tager vi data i text felterne og sætter dem ind til klassen Medarbejder og kalder objektet "m" (Objekt af model klassen)
                 NyVagt m1 = new NyVagt() { NyVagtNavn = MedarbejderNavnVagt, NyVagtAfdeling = VagtAfdeling, NyVagtLokation = VagtLokation, NyVagtTid = VagtTid, NyVagtDato = VagtDato };
 
                 //og her poster vi det til vores database som en Json og som Async så det programmet ikke føles langsomt

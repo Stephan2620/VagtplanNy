@@ -12,6 +12,6 @@
         <ListView HorizontalAlignment="Left" Height="438" Margin="376,146,0,0" VerticalAlignment="Top" Width="417">
             
         </ListView>
-        <Button x:Name="btn_GoBack" Content="Go back to main page" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
+        <Button x:Name="btn_GoBack" Content="Tilbage" Margin="120,655,0,0" VerticalAlignment="Top" Width="268" CornerRadius="8" Background="White" BorderBrush="Black" Height="47"/>
     </Grid>
 </Page>
